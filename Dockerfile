@@ -1,7 +1,9 @@
-FROM botpress/server
+FROM botpress/server:v12_26_10
 
-# Copia a configuração do Botpress para o contêiner
-#COPY ./data /botpress/data
+# Se você tiver um diretório de dados para copiar, descomente a linha abaixo
+# COPY ./data /botpress/data
 
 EXPOSE 3000
-CMD ["bp"]
+
+# Comando para iniciar o Botpress
+CMD ["./bp"]
